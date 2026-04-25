@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <!-- подключение библиотеки axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>        
+    <script>
+        axios.get('https://json.geoiplookup.io/')
+            .then(res => {
+                console.log('Browser success:', res.stat)
+            })
+            .catch(err => console.log('Browser error:', err.message));
+    </script>
+</body>
+</html>

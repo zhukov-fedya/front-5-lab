@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue CDN Clicker</title>
+</head>
+<body>
+  <div id="app">
+    <p>Счетчик: {{ count }}</p>
+    <button v-on:click="count++">Клик</button>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const app = Vue.createApp;
+    const ref = Vue.ref;    // для реактивной переменной
+
+    app({
+      setup() {
+        const count = ref(0);
+        return { count };
+      }
+    }).mount('#app');   // привязываем приложение к разметке
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "dotenv-webpack": "^9.0.0",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2"
+  },
+  
+  "scripts": {
+    "build:local": "webpack --env environment=local --mode development",
+    "build:dev":   "webpack --env environment=dev   --mode development",
+    "build:prod":  "webpack --env environment=prod  --mode production"
+  }
+
+}
